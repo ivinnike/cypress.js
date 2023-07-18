@@ -1,4 +1,7 @@
 # cypress.js
+<div id="header" align="center">
+  <img src="https://media.giphy.com/media/NTjkdAKV2v0MZDWuWD/giphy.gif" width="400"/>
+</div>
 
 Как запустить?
 1. Установить node.js: https://nodejs.org/en/download/
