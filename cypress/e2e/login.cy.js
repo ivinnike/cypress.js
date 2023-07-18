@@ -1,7 +1,7 @@
 
 require('cypress-xpath');
 
-describe('Позитивный кейс авторизации', function () {
+describe('Авторизация', function () {
    it('Валидный логин и валидный пароль', function () {
         cy.visit('https://login.qa.studio')
         cy.xpath('//*[@id="loginButton"]').should('be.disabled');
