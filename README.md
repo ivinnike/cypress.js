@@ -15,3 +15,4 @@
    </br> `npm install -D cypress-xpath`
 6. Запускать Сайпресс можно командой
    </br>`npx cypress open`
+7. Файл с автотестами распологается в директории 'cypress/e2e/login.cy.js
