@@ -14,6 +14,7 @@ describe('Авторизация', function () {
     })
 
     it('Восстановление пароля', function () {
+         cy.clearAllCookies()
          cy.visit('https://login.qa.studio')
          cy.xpath('//*[@id="forgotEmailButton"]').click();
          cy.xpath('//*[@id="exitRestoreButton"]').should('be.enabled');
@@ -25,6 +26,7 @@ describe('Авторизация', function () {
      })
 
      it('Валидный логин и невалидный пароль', function () {
+        cy.clearAllCookies()
         cy.visit('https://login.qa.studio')
         cy.xpath('//*[@id="loginButton"]').should('be.disabled');
         cy.xpath('//*[@id="mail"]').type('german@dolnikov.ru');
@@ -36,6 +38,7 @@ describe('Авторизация', function () {
     })
 
     it('Невалидный логин и валидный пароль', function () {
+        cy.clearAllCookies()
         cy.visit('https://login.qa.studio')
         cy.xpath('//*[@id="loginButton"]').should('be.disabled');
         cy.xpath('//*[@id="mail"]').type('man@dolnikov.ru');
@@ -47,6 +50,7 @@ describe('Авторизация', function () {
     })
 
     it('Проверка на приведение к строчным буквам в логине', function () {
+        cy.clearAllCookies()
         cy.visit('https://login.qa.studio')
         cy.xpath('//*[@id="loginButton"]').should('be.disabled');
         cy.xpath('//*[@id="mail"]').type('GerMan@Dolnikov.ru');
